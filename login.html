@@ -23,7 +23,7 @@
             margin:0;
             font-family: 'Quicksand', sans-serif;
         }
-        .email-enviado {
+        .login {
             width: 100%;
             height: 100vh;
             display: grid;
@@ -32,7 +32,7 @@
         .form-container{
             display: grid;
             grid-template-rows: auto 1fr auto;
-            width: 40%;
+            width: 100%;
             justify-items: center;
         }
         .logo{
@@ -41,46 +41,36 @@
             justify-self: center;
             display: none;
         }
-        .title {
-            font-size: var(--lg);
-            margin-bottom: 12px;
-            text-align: center;
-        }
-        .subtitle {
-            color: var(--very-light-pink);
-            font-size: var(--md);
-            font-weight: 300;
-            margin-top: 0;
-            margin-bottom: 32px;
-            text-align: center;
-        }
-        .email-image {
-            width: 132px;
-            height: 132px;
-            border-radius: 50%;
-            background-color: var(--text-input-field);
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-        .email-image img{
-            width: 80px;
-        }
-        .resend {
-            font-size: var(--sm);
-        }
-        .resend span{
-            color: var(--very-light-pink);
-        }
-        .resend a{
-            color: var(--hospital-green);
-            text-decoration: none;
-        }
         .form{
             display:flex;
             flex-direction: column;
-            place-items: center;
+        }
+        form a{
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 48px;
+        }
+        .label{
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-align: left;
+        }
+        .input{
+            background-color: var(--text-input-field);
+            border:none;
+            border-radius: 6px;
+            height: 30px;
+            width: 300px;
+            font-size: var(--md);
+            padding: 6px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+        .input-email{
+            margin-bottom: 12px;
         }
         .primary-button{
             background-color: var(--hospital-green);
@@ -92,7 +82,20 @@
             font-size: var(--md);
             font-weight: bold;
             height: 32px;
-            justify-items: center;
+            align-self: center;
+            margin-bottom: 48px;
+        }
+        .secondary-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            width: 300px;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 32px;
+            align-self: center;
         }
         .login-button{
             margin-top: 12px;
@@ -102,24 +105,33 @@
             .logo{
                 display:block;
             }
+            .secondary-button{
+                position: fixed;
+                bottom: 12px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="email-enviado">
+    <div class="login">
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
 
-            <h1 class="title">El correo ha sido enviado</h1>
-            <p class="subtitle">Por favor revisa tu bandeja de correo para conocer las instrucciones de como resetear tu contraseña</p>
-            <div class="email-image">
-                <img src="./icons/email.svg" alt="correo">
-            </div>
-            <button class="primary-button">Log in</button>
-            <p class="resend">
-                <span>No recibí el correo</span>
-                <a href="/">reenviar</a>
-            </p>
+            <form action="/" class="form">
+                <label for="email" class="label">Email</label>
+                
+                <input type="text" id="email" placeholder="correo@example.com" class="input input-email">
+                
+                <label for="password" class="label">Contraseña</label>
+                
+                <input type="password" id="password" placeholder="********" class="input input-password">
+
+                <button class="primary-button login-button">Log in</button>
+
+                <a href="/">Olvidé mi contraseña</a>
+            </form>
+
+            <button class="secondary-button signup-button">Sign up</button>
         </div>
     </div>
 </body>

@@ -23,7 +23,7 @@
             margin:0;
             font-family: 'Quicksand', sans-serif;
         }
-        .login {
+        .cambiar-contraseña {
             width: 100%;
             height: 100vh;
             display: grid;
@@ -69,7 +69,7 @@
             border:none;
             border-radius: 6px;
             height: 30px;
-            width: 100%;
+            width: 300px;
             font-size: var(--md);
             padding: 6px;
             margin-bottom: 12px;
@@ -80,7 +80,7 @@
             border-radius: 8px;
             border: none;
             color: var(--white);
-            width: 80%;
+            width: 300px;
             cursor: pointer;
             font-size: var(--md);
             font-weight: bold;
@@ -95,14 +95,11 @@
             .logo{
                 display:block;
             }
-            .form-container{
-                width: 300px;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="login">
+    <div class="cambiar-contraseña">
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
 
@@ -118,7 +115,7 @@
                 
                 <input type="password" id="new.password" placeholder="********" class="input input-password">
 
-                <input type="submit" value="Enviar" class="primary-button login-button">
+                <button class="primary-button login-button">Enviar</button>
             </form>
         </div>
     </div>
