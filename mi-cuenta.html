@@ -68,25 +68,17 @@
             margin-bottom: 6px;
             text-align: left;
         }
-        .input{
-            background-color: var(--text-input-field);
-            border:none;
-            border-radius: 6px;
-            height: 30px;
-            width: 300px;
+        .value{
+            color: var(--very-light-pink);
             font-size: var(--md);
-            padding: 6px;
-            margin-bottom: 12px;
-            box-sizing: border-box;
+            margin: 8px 0 32px 0;
         }
-        .input-name,.input-email,.input-password{
-            margin-bottom: 22px;
-        }
-        .primary-button{
-            background-color: var(--hospital-green);
+        
+        .secondary-button{
+            background-color: var(--white);
             border-radius: 8px;
-            border: none;
-            color: var(--white);
+            border: 1px solid var(--hospital-green);;
+            color: var(--hospital-green);
             width: 300px;
             cursor: pointer;
             font-size: var(--md);
@@ -123,18 +115,18 @@
                 <div>
                     <label for="name" class="label">Nombre</label>
                     
-                    <input type="text" id="name" placeholder="Name" class="input input-name">
+                    <p class="value">Andrés Pérez</p>
     
-                    <label for="email" class="label">Email</label>
+                    <label for="email" class="label">Correo</label>
                     
-                    <input type="text" id="email" placeholder="correo@example.com" class="input input-email">
+                    <p class="value">andres.perez@gmail.com</p>
                     
-                    <label for="new-password" class="label">Contraseña</label>
+                    <label for="password" class="label">Contraseña</label>
                     
-                    <input type="password" id="new.password" placeholder="********" class="input input-password">
+                    <p class="value">********</p>
                 </div>
 
-                <button class="primary-button login-button">Crear cuenta</button>
+                <button class="secondary-button login-button">Editar</button>
             </form>
         </div>
     </div>
