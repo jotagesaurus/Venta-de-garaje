@@ -21,24 +21,52 @@
             --lg: 18px;
         }
         body{
-            margin:30px;
             font-family: 'Quicksand', sans-serif;
         }
         .cards-container{
-            display: flex;
-            flex-wrap: wrap;
-            align-content: space-around;
-            justify-content: space-between;
-            flex-direction: row;
-            flex-flow: row wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,240px);
+            gap: 24px;
+            place-content: center;
         }
         .product-card{
-            display: grid;
-            align-items: center;
+            width: 100%;
         }
         .product-card > img{
-            height: 200px;
-            width: 200px;
+            aspect-ratio: 1/1;
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+
+        }
+        .product-info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 12px;
+            margin-top: 12px;
+        }
+        .product-info figure{
+            margin:0;
+        }
+        .product-info div p:nth-child(1){
+            font-weight: bold;
+            font-size: var(--md);
+            margin-top: 0;
+            margin-bottom: 4px;
+        }
+        .product-info div p:nth-child(2){
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 0;
+            color: var(--very-light-pink);
+        }
+        @media (max-width:640px) {
+                .cards-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fill,140px);
+                gap: 24px;
+            }
         }
     </style>
 <body>
@@ -46,178 +74,211 @@
         <div class="cards-container">
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 1</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 2</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
-
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 1</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 2</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
-
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 1</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 2</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
-
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 1</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 2</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
-
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 1</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 2</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
-
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 1</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 2</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
-
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 1</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 2</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
-
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 1</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
+                
             </div>
 
             <div class="product-card">
                 <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="producto" class="product-img">
-                <div>
-                    <p>$60.000</p>
-                    <p>Libro 2</p>
+                <div class="product-info">
+                    <div>
+                        <p>$60.000</p>
+                        <p>Libro 1</p>
+                    </div>
+                    <figure>
+                        <img src="./icons/bt_add_to_cart.svg" alt="">
+                    </figure>
                 </div>
-                <figure>
-                    <img src="./icons/bt_add_to_cart.svg" alt="">
-                </figure>
             </div>
 
         </div>
