@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="shortcut icon" href="./logos/favicon_yard_sale.svg" type="img">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Mi órden</title>
+    <title>Mi orden</title>
     <style>
         :root {
             --very-light-pink: #C7C7C7;
@@ -24,17 +24,127 @@
             margin:0;
             font-family: 'Quicksand', sans-serif;
         }
+        .container{
+            margin: 0 40px 0 40px;
+        }
+        h1{
+            color: var(--black);
+            font-weight: bold;
+            font-size: var(--lg);
+            margin-bottom: 48px;
+        }
+        .summary{
+            background-color: var(--text-input-field);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 24px;
+        }
+        .summary p{
+            margin: 6px;
+        }
+        .items-container{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        figure{
+            margin:0;
+            padding: 0;
+        }
+        figure img{
+            height: 100px;
+            width: 100px;
+            border-radius: 24px;
+        }
+        .item{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .item div{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            column-gap: 12px;
+        }
+        .summary div p:nth-child(1){
+            color: var(--black);
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+        .price {
+            color: var(--black);
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+        .item-name{
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            font-weight: bold;
+        }
+        @media(max-width:640px){
+            h1{
+                display:none;
+            }
+            .summary{
+                margin-top: 48px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div>
-
-    </div>
-    <div>
-
-    </div>
-    <div>
-        
+    <div class="container">
+        <h1>Mi orden</h1>
+        <div class="summary">
+            <div>
+                <p>01/02/2023</p>
+                <p class="item-name">4 artículos</p>
+            </div>
+            <p class="price">$300.000</p>
+        </div>
+        <div class="items-container">
+            <div class="item">
+                <div>
+                    <figure>
+                        <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </figure>
+                    <p class="item-name">Libro 1</p>
+                </div>
+                <p class="price">$50.000</p>
+            </div>
+            <div class="item">
+                <div>
+                    <figure>
+                        <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </figure>
+                    <p class="item-name">Libro 2</p>
+                </div>
+                <p class="price">$100.000</p>
+            </div>
+            <div class="item">
+                <div>
+                    <figure>
+                        <img src="https://images.pexels.com/photos/762687/pexels-photo-762687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </figure>
+                    <p class="item-name">Libro 1</p>
+                </div>
+                <p class="price">$50.000</p>
+            </div>
+            <div class="item">
+                <div>
+                    <figure>
+                        <img src="https://images.pexels.com/photos/256450/pexels-photo-256450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    </figure>
+                    <p class="item-name">Libro 2</p>
+                </div>
+                <p class="price">$100.000</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
