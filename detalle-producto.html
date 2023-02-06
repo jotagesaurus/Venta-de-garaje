@@ -25,29 +25,32 @@
             font-family: 'Quicksand', sans-serif;
         }
         .contenedor-detalle{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-content: flex-start;
+            display: grid;
+            align-items:start;
             height: 1vh;
             width: 300px;
             position: absolute;
             right: 0;
+            top: 0;
             gap: 12px;
         }
         .boton-cierre{
-            position: relative;
+            position: absolute;
             width: 10px;
             height: 10px;
             background-color: var(--white);
             border: 5px solid var(--white);
             border-radius: 50%;
-            top: 30px;
+            top: 15px;
             left: 10px;
+            cursor: pointer;
         }
         .img-producto{
             border-radius: 0 0 12px 12px;
             object-fit: fill;
+            width: 100%;
+            aspect-ratio: 1/1;
+            margin: 0;
         }
         .carrusel{
             display: flex;
@@ -59,6 +62,7 @@
             width: 8px;
             background-color: var(--text-input-field);
             border-radius: 50%;
+            cursor: pointer;
         }
         .carrusel div:nth-child(1){
             background-color: var(--very-light-pink);
@@ -88,8 +92,15 @@
             color: var(--white);
             border: none;
             border-radius: 12px;
-            height: 100px;
+            height: 40px;
             cursor: pointer;
+            justify-self: center;
+            margin-bottom: 25px;
+        }
+        @media (max-width:640px){
+            .contenedor-detalle{
+                width: 100%;
+            }
         }
         
     </style>
